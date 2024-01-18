@@ -1,6 +1,8 @@
-import { createSignal } from "solid-js";
+import { createSignal, lazy } from "solid-js";
 
-import Album from "./components/Album.tsx";
+// import Album from "./components/Album.tsx";
+
+const Album = lazy(() => import("./components/Album.tsx"));
 
 const [name, _] = createSignal("chaitanya");
 
